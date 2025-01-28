@@ -9,7 +9,7 @@ app = Bottle()
 # Function to find restriction sites using all enzymes
 def find_restriction_sites(dna_seq):
     seq = Seq(dna_seq)
-    enzymes = AllEnzymes  # Use all available restriction enzymes
+    enzymes = AllEnzymes  
     results = {}
     enzymes_not_cutting = []
 
@@ -32,7 +32,7 @@ def find_restriction_sites(dna_seq):
 # Home route to display the form for DNA input
 @app.route('/')
 def home():
-    return template('WebPython/views/iindex.tpl')  # index.html should be inside the views/templates folder
+    return template('WebPython/views/iindex.tpl')  
 
 # Route to handle form submission and display results
 @app.route('/results', method="POST")
