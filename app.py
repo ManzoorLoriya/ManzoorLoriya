@@ -32,7 +32,7 @@ def find_restriction_sites(dna_seq):
 # Home route to display the form for DNA input
 @app.route('/')
 def home():
-    return template('WebPython/views/iindex.tpl')  
+    return template('WebPython/views/iindex.tpl')  #Update the file path
 
 # Route to handle form submission and display results
 @app.route('/results', method="POST")
